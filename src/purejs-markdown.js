@@ -225,6 +225,7 @@ const MD_REGEX = {
     i_alt: {regex: new RegExp(STYLE_REG.replaceAll(/[SD]/g, '_'), 'gm'), rstr: 'em', group: 1, func: MD_FBASE.ADD_TAG},
     // **bold**                     those are still long
     b: {regex: new RegExp(STYLE_REG.replaceAll('S', '*').replaceAll('D', '*\\*'), 'gm'), rstr: 'strong', group: 1, func: MD_FBASE.ADD_TAG},
+    b: {regex: new RegExp(STYLE_REG.replaceAll('S', '*').replaceAll('D', '*\\*\\*'), 'gm'), rstr: 'strong', group: 1, func: MD_FBASE.ADD_TAG},
     b_alt: {regex: new RegExp(STYLE_REG.replaceAll('S', '_').replaceAll('D', '_\\_'), 'gm'), rstr: 'strong', group: 1, func: MD_FBASE.ADD_TAG},
     // ~~strikethrough~~            why
     s: {regex: new RegExp(STYLE_REG.replaceAll('S', '~').replaceAll('D', '~\\~'), 'gm'), rstr: 's', group: 1, func: MD_FBASE.ADD_TAG},
